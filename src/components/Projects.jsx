@@ -1,8 +1,8 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import {
-  Bot, FileSearch, Mic, Github, ExternalLink,
-  Zap, CheckCircle2, Tag, ArrowUpRight,
+  Bot, Mic, Github, ExternalLink,
+  Zap, CheckCircle2, Tag, ArrowUpRight, ScanFace, PhoneCall,
 } from 'lucide-react'
 
 const fadeUp = {
@@ -16,55 +16,55 @@ const fadeUp = {
 const projects = [
   {
     id: 1,
-    label: 'Featured Project',
-    title: 'AI Chatbot System',
-    subtitle: 'Cloud + Local LLM powered real-time conversational AI',
-    icon: Bot,
-    accent: '#0ea5e9',
-    accentBg: 'rgba(14,165,233,0.08)',
-    accentBorder: 'rgba(14,165,233,0.2)',
-    gradient: 'linear-gradient(135deg, rgba(14,165,233,0.12) 0%, rgba(124,58,237,0.08) 100%)',
+    label: 'Featured · AI / CV',
+    title: 'Pennar Pulse',
+    subtitle: 'Smart workforce attendance & face-recognition prototype',
+    icon: ScanFace,
+    accent: '#f97316',
+    accentBg: 'rgba(249,115,22,0.08)',
+    accentBorder: 'rgba(249,115,22,0.2)',
+    gradient: 'linear-gradient(135deg, rgba(249,115,22,0.12) 0%, rgba(14,165,233,0.08) 100%)',
     description:
-      'A production-grade AI chatbot architecture that supports both cloud-based (Gemini API) and local (Ollama) LLM inference. Built with a FastAPI backend, it features dynamic prompt engineering, structured response handling, and a clean API-driven design ready for integration into any frontend.',
+      'A workforce attendance prototype that connects a camera-driven recognition workflow with employee management, attendance, reporting, notifications, audit events, and operational modules. The current repository clearly separates the recognition UX from the production biometric layer.',
     features: [
-      'Dual LLM support — Gemini API (cloud) + Ollama (local) switching',
-      'FastAPI backend with async request handling and rate management',
-      'Advanced prompt engineering for improved response accuracy',
-      'Structured JSON responses for seamless frontend integration',
-      'Modular architecture — easily swap models or add new providers',
+      'Camera and photo-upload recognition workflow',
+      'Face enrollment and employee management modules',
+      'Recognition state machine with threshold-based decision flow',
+      'Attendance, gate, notification, and audit-event integration',
+      'Reports, analytics, shifts, leave, devices, and ERP workflow modules',
     ],
-    tech: ['FastAPI', 'Gemini API', 'Ollama', 'Python', 'REST API', 'Prompt Engineering'],
+    tech: ['React', 'TypeScript', 'TanStack Start', 'Tailwind CSS', 'Browser Camera API'],
     github: null,
     demo: null,
-    status: 'Completed',
+    status: 'Private Prototype',
   },
   {
     id: 2,
-    label: 'AI / NLP',
-    title: 'Document QA System',
-    subtitle: 'RAG-powered intelligent document question answering',
-    icon: FileSearch,
+    label: 'AI Engineering',
+    title: 'FitNova — Sales Call Intelligence',
+    subtitle: 'LLM-powered sales conversation analysis pipeline',
+    icon: PhoneCall,
     accent: '#a855f7',
     accentBg: 'rgba(168,85,247,0.08)',
     accentBorder: 'rgba(168,85,247,0.2)',
     gradient: 'linear-gradient(135deg, rgba(168,85,247,0.12) 0%, rgba(34,211,238,0.06) 100%)',
     description:
-      'An end-to-end Retrieval-Augmented Generation (RAG) pipeline that lets users query any document with natural language. Documents are chunked, embedded, and indexed into a vector store for fast semantic retrieval — then fed into an LLM to generate grounded, accurate answers.',
+      'An end-to-end sales-call intelligence workflow designed to ingest conversations, classify sales relevance, evaluate rubric dimensions, flag issues, validate generated evidence, store structured results, and expose insights through a dashboard.',
     features: [
-      'Intelligent document chunking with configurable overlap strategy',
-      'Embedding generation and vector database indexing for semantic search',
-      'Cosine similarity-based top-k retrieval for relevant context',
-      'LLM response generation grounded strictly in retrieved passages',
-      'Supports PDF, TXT, and DOCX document formats',
+      'Sales-call ingestion and conversation classification',
+      'LLM-based structured analysis and rubric scoring',
+      'Quote-grounding verification to reduce unsupported conclusions',
+      'SQLite-backed structured result storage',
+      'Streamlit dashboard for reviewing analysis output',
     ],
-    tech: ['Python', 'RAG', 'Embeddings', 'Vector Search', 'LLM', 'Semantic Retrieval'],
+    tech: ['Python', 'LLMs', 'Gemini API', 'SQLite', 'Streamlit', 'Prompt Engineering'],
     github: null,
     demo: null,
-    status: 'Completed',
+    status: 'Private / Client Work',
   },
   {
     id: 3,
-    label: 'Voice AI',
+    label: 'Public · Voice AI',
     title: 'AI English Coach',
     subtitle: 'Voice + text English speaking coach with progress tracking',
     icon: Mic,
@@ -73,18 +73,18 @@ const projects = [
     accentBorder: 'rgba(34,211,238,0.2)',
     gradient: 'linear-gradient(135deg, rgba(34,211,238,0.12) 0%, rgba(236,72,153,0.06) 100%)',
     description:
-      'An interactive English speaking coach that accepts both voice and text input. Powered by Whisper for speech-to-text and gTTS for voice responses, it corrects grammar, provides natural conversational replies, scores fluency, and exports detailed progress reports — all within a Streamlit interface.',
+      'A voice-first English speaking coach combining Whisper speech recognition, local Mistral inference through Ollama, structured coaching feedback, fluency scoring, gTTS responses, and session analytics in a Streamlit application.',
     features: [
-      'Whisper-powered voice recognition for real-time speech-to-text',
-      'Grammar correction with natural, contextual AI responses via Ollama',
-      'Fluency scoring system based on accuracy and naturalness metrics',
-      'Text-to-speech replies using gTTS for immersive coaching experience',
-      'Progress report export — track improvement over sessions',
+      'Whisper-powered speech-to-text input',
+      'Local Mistral 7B inference through Ollama',
+      'Structured grammar, response, tip, and practice-question feedback',
+      'Fluency scoring and session-level metrics',
+      'JSON practice-history export and text-to-speech responses',
     ],
-    tech: ['Streamlit', 'Ollama', 'Whisper', 'gTTS', 'Python', 'Speech AI'],
+    tech: ['Streamlit', 'Ollama', 'Mistral 7B', 'Whisper', 'gTTS', 'Python'],
     github: 'https://github.com/VijayaKio10/ai-english-coach',
     demo: null,
-    status: 'Completed',
+    status: 'Public',
   },
 ]
 
@@ -156,7 +156,7 @@ function ProjectCard({ project, index }) {
           <div className="flex items-center gap-1.5">
             <div
               className="w-2 h-2 rounded-full"
-              style={{ background: '#22c55e', boxShadow: '0 0 6px #22c55e' }}
+              style={{ background: status === 'Public' ? '#22c55e' : '#f59e0b', boxShadow: `0 0 6px ${status === 'Public' ? '#22c55e' : '#f59e0b'}` }}
             />
             <span className="text-xs font-mono" style={{ color: 'var(--text-muted)' }}>
               {status}
@@ -319,7 +319,7 @@ export default function Projects() {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="section-subtitle">
-            Real-world AI systems built from scratch — chatbots, RAG pipelines, and voice-powered applications.
+            AI/ML systems and product prototypes spanning computer vision, LLM applications, speech AI, and business automation.
           </p>
         </motion.div>
 
@@ -351,7 +351,7 @@ export default function Projects() {
                 More projects on GitHub
               </p>
               <p className="text-xs mt-0.5" style={{ color: 'var(--text-muted)' }}>
-                Experiments, notebooks, and open-source contributions
+                Experiments, applications, and engineering projects
               </p>
             </div>
           </div>
