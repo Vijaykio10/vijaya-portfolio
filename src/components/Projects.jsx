@@ -34,7 +34,7 @@ const projects = [
       'Modular architecture — easily swap models or add new providers',
     ],
     tech: ['FastAPI', 'Gemini API', 'Ollama', 'Python', 'REST API', 'Prompt Engineering'],
-    github: 'https://github.com/',
+    github: null,
     demo: null,
     status: 'Completed',
   },
@@ -58,7 +58,7 @@ const projects = [
       'Supports PDF, TXT, and DOCX document formats',
     ],
     tech: ['Python', 'RAG', 'Embeddings', 'Vector Search', 'LLM', 'Semantic Retrieval'],
-    github: 'https://github.com/',
+    github: null,
     demo: null,
     status: 'Completed',
   },
@@ -82,7 +82,7 @@ const projects = [
       'Progress report export — track improvement over sessions',
     ],
     tech: ['Streamlit', 'Ollama', 'Whisper', 'gTTS', 'Python', 'Speech AI'],
-    github: 'https://github.com/',
+    github: 'https://github.com/VijayaKio10/ai-english-coach',
     demo: null,
     status: 'Completed',
   },
@@ -128,13 +128,11 @@ function ProjectCard({ project, index }) {
         borderColor: `${accent}40`,
       }}
     >
-      {/* Top gradient wash */}
       <div
         className="absolute inset-x-0 top-0 h-48 opacity-60 pointer-events-none"
         style={{ background: gradient }}
       />
 
-      {/* Glow corner accent */}
       <div
         className="absolute top-0 right-0 w-40 h-40 pointer-events-none opacity-20"
         style={{
@@ -143,8 +141,6 @@ function ProjectCard({ project, index }) {
       />
 
       <div className="relative p-7 md:p-8">
-
-        {/* ── Top row: label + status ── */}
         <div className="flex items-center justify-between mb-5">
           <span
             className="text-xs font-mono px-3 py-1 rounded-full"
@@ -168,7 +164,6 @@ function ProjectCard({ project, index }) {
           </div>
         </div>
 
-        {/* ── Title row ── */}
         <div className="flex items-start gap-4 mb-4">
           <div
             className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110"
@@ -193,18 +188,15 @@ function ProjectCard({ project, index }) {
           </div>
         </div>
 
-        {/* ── Accent divider ── */}
         <div
           className="w-full h-px mb-5"
           style={{ background: `linear-gradient(90deg, ${accent}40, transparent)` }}
         />
 
-        {/* ── Description ── */}
         <p className="text-sm leading-relaxed mb-5" style={{ color: 'var(--text-secondary)' }}>
           {description}
         </p>
 
-        {/* ── Features ── */}
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-3">
             <Zap size={13} style={{ color: accent }} />
@@ -219,7 +211,6 @@ function ProjectCard({ project, index }) {
           </ul>
         </div>
 
-        {/* ── Tech stack ── */}
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-3">
             <Tag size={12} style={{ color: 'var(--text-muted)' }} />
@@ -244,21 +235,36 @@ function ProjectCard({ project, index }) {
           </div>
         </div>
 
-        {/* ── Action buttons ── */}
         <div
           className="flex items-center gap-3 pt-5"
           style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}
         >
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-outline flex-1 justify-center py-2.5 text-sm"
-            style={{ borderColor: `${accent}40`, color: accent }}
-          >
-            <Github size={15} />
-            GitHub
-          </a>
+          {github ? (
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline flex-1 justify-center py-2.5 text-sm"
+              style={{ borderColor: `${accent}40`, color: accent }}
+            >
+              <Github size={15} />
+              GitHub
+            </a>
+          ) : (
+            <div
+              className="flex-1 flex items-center justify-center gap-2 py-2.5 text-sm rounded-xl"
+              style={{
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.06)',
+                color: 'var(--text-muted)',
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '0.85rem',
+              }}
+            >
+              <Github size={13} />
+              Repository not public
+            </div>
+          )}
           {demo ? (
             <a
               href={demo}
@@ -299,8 +305,6 @@ export default function Projects() {
   return (
     <section id="projects" className="section" style={{ background: 'rgba(4,15,42,0.4)' }}>
       <div className="container-max">
-
-        {/* ── Header ── */}
         <motion.div
           ref={headerRef}
           variants={fadeUp}
@@ -319,14 +323,12 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        {/* ── Project cards grid ── */}
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
           {projects.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} />
           ))}
         </div>
 
-        {/* ── GitHub CTA ── */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -354,7 +356,7 @@ export default function Projects() {
             </div>
           </div>
           <a
-            href="https://github.com/"
+            href="https://github.com/VijayaKio10"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline flex-shrink-0"
