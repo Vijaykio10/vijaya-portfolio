@@ -18,44 +18,43 @@ const experiences = [
     role: 'AI / ML Intern',
     company: 'VDart',
     location: 'Chennai, India',
-    period: '2024',
-    type: 'Internship',
+    period: 'Nov 2025 – Present',
+    type: 'Current',
     icon: BrainCircuit,
     accent: '#0ea5e9',
     accentBg: 'rgba(14,165,233,0.08)',
     accentBorder: 'rgba(14,165,233,0.2)',
     summary:
-      'Designed and deployed end-to-end ML pipelines and LLM-powered applications, working across the full AI stack from data preprocessing to production-ready APIs.',
+      'Working on applied AI/ML solutions across LLM applications, computer vision prototypes, speech AI, and data-driven automation — turning business requirements into usable AI systems.',
     achievements: [
-      'Built complete ML workflows covering preprocessing, feature engineering, model training, and evaluation.',
-      'Developed an LLM-powered chatbot using FastAPI and Gemini API with robust API request handling.',
-      'Integrated Ollama for local LLM inference, enabling cloud-independent AI deployment.',
-      'Applied ANN, CNN, and RNN architectures for deep learning experiments.',
-      'Practised advanced prompt engineering to significantly improve AI response quality and relevance.',
-      'Improved backend API request handling and response latency for production chatbot applications.',
+      'Built and iterated on end-to-end AI/ML prototypes spanning ingestion, analysis, model/API integration, storage, and user-facing interfaces.',
+      'Developed LLM-powered applications using Gemini API, Ollama, LangChain, RAG, embeddings, and vector databases.',
+      'Built FitNova, a sales-call intelligence pipeline for conversation classification, rubric-based analysis, structured outputs, and SQLite-backed reporting.',
+      'Contributed to Pennar Pulse, a workforce attendance prototype with webcam-based recognition flows, employee management, attendance, reporting, and operational modules.',
+      'Developed voice-based AI applications using Whisper, local LLM inference, text-to-speech, and Streamlit interfaces.',
+      'Worked with FastAPI, Streamlit, React/Vite, SQLite, and Git/GitHub to turn AI concepts into demonstrable applications.',
     ],
-    tags: ['FastAPI', 'Gemini API', 'Ollama', 'ANN', 'CNN', 'RNN', 'Prompt Engineering', 'Python'],
+    tags: ['Python', 'LLMs', 'RAG', 'LangChain', 'Gemini', 'Ollama', 'Whisper', 'FastAPI', 'Streamlit', 'React'],
   },
   {
     role: 'Data Analyst Intern',
     company: 'VDart',
     location: 'Chennai, India',
-    period: '2023 – 2024',
+    period: 'May 2025 – Jun 2025',
     type: 'Internship',
     icon: BarChart3,
     accent: '#a855f7',
     accentBg: 'rgba(168,85,247,0.08)',
     accentBorder: 'rgba(168,85,247,0.2)',
     summary:
-      'Delivered business intelligence solutions through interactive Power BI dashboards, clean data pipelines, and automated reporting — translating raw data into actionable insights.',
+      'Worked on data analysis and business intelligence workflows, using SQL, Excel, and Power BI to transform operational data into reports and dashboards.',
     achievements: [
-      'Designed and deployed interactive Power BI dashboards with dynamic filters and drill-down capabilities.',
-      'Cleaned, transformed, and modelled datasets using SQL queries and Excel functions.',
-      'Created advanced DAX measures using CALCULATE, RANKX, and ALL for complex KPI calculations.',
-      'Automated recurring reporting workflows, reducing manual effort by several hours per cycle.',
-      'Collaborated with business stakeholders to gather requirements and iterate on dashboard designs.',
+      'Cleaned and transformed datasets using SQL queries and Excel-based data preparation workflows.',
+      'Built interactive Power BI dashboards for KPI monitoring, filtering, and business reporting.',
+      'Used DAX measures and calculated metrics to support analytical reporting and dashboard insights.',
+      'Worked with stakeholders to understand reporting requirements and translate them into usable visualizations.',
     ],
-    tags: ['Power BI', 'SQL', 'Excel', 'DAX', 'CALCULATE', 'RANKX', 'Data Modelling'],
+    tags: ['SQL', 'Power BI', 'Excel', 'DAX', 'Data Cleaning', 'Data Visualisation'],
   },
 ]
 
@@ -95,7 +94,6 @@ function ExperienceCard({ exp, index }) {
       animate={inView ? 'visible' : 'hidden'}
       className="relative pl-10 md:pl-14"
     >
-      {/* Timeline dot */}
       <div
         className="absolute left-0 top-6 w-4 h-4 rounded-full border-2 z-10"
         style={{
@@ -105,7 +103,6 @@ function ExperienceCard({ exp, index }) {
         }}
       />
 
-      {/* Connector line to next card */}
       {index < experiences.length - 1 && (
         <div
           className="absolute left-[7px] top-10 w-0.5 h-full"
@@ -115,13 +112,9 @@ function ExperienceCard({ exp, index }) {
         />
       )}
 
-      {/* Card */}
       <div className="glass-card p-6 md:p-8 mb-10 group">
-
-        {/* Top row */}
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-5">
           <div className="flex items-start gap-4">
-            {/* Icon */}
             <div
               className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110"
               style={{ background: accentBg, border: `1px solid ${accentBorder}` }}
@@ -129,7 +122,6 @@ function ExperienceCard({ exp, index }) {
               <Icon size={22} style={{ color: accent }} />
             </div>
 
-            {/* Role & company */}
             <div>
               <h3
                 className="text-xl font-bold leading-tight mb-1"
@@ -150,7 +142,6 @@ function ExperienceCard({ exp, index }) {
             </div>
           </div>
 
-          {/* Period + type badge */}
           <div className="flex flex-col items-start sm:items-end gap-2 flex-shrink-0">
             <div
               className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"
@@ -170,18 +161,15 @@ function ExperienceCard({ exp, index }) {
           </div>
         </div>
 
-        {/* Divider */}
         <div
           className="w-full h-px mb-5"
           style={{ background: `linear-gradient(90deg, ${accent}30, transparent)` }}
         />
 
-        {/* Summary */}
         <p className="text-sm leading-relaxed mb-5" style={{ color: 'var(--text-secondary)' }}>
           {summary}
         </p>
 
-        {/* Achievements */}
         <div className="mb-5">
           <p
             className="text-xs font-mono mb-3"
@@ -196,7 +184,6 @@ function ExperienceCard({ exp, index }) {
           </ul>
         </div>
 
-        {/* Tags */}
         <div className="flex flex-wrap gap-2 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
           {tags.map(tag => (
             <span
@@ -224,8 +211,6 @@ export default function Experience() {
   return (
     <section id="experience" className="section">
       <div className="container-max">
-
-        {/* ── Header ── */}
         <motion.div
           ref={headerRef}
           variants={fadeUp}
@@ -240,14 +225,11 @@ export default function Experience() {
             Professional <span className="gradient-text">Experience</span>
           </h2>
           <p className="section-subtitle">
-            Hands-on internship experience spanning AI/ML engineering and data analytics — both at VDart.
+            Applied AI/ML and data analytics experience at VDart, with a focus on building practical systems from business requirements.
           </p>
         </motion.div>
 
-        {/* ── Timeline ── */}
         <div className="relative max-w-3xl">
-
-          {/* Top timeline label */}
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -267,12 +249,10 @@ export default function Experience() {
             </span>
           </motion.div>
 
-          {/* Experience cards */}
           {experiences.map((exp, i) => (
             <ExperienceCard key={exp.role} exp={exp} index={i} />
           ))}
 
-          {/* Timeline end marker */}
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -291,12 +271,11 @@ export default function Experience() {
               className="text-xs font-mono"
               style={{ color: 'var(--text-muted)', letterSpacing: '0.08em' }}
             >
-              B.Sc. Computer Science · SRM Trichy · 2020–2023
+              M.Sc. Applied Data Science · SRM IST Trichy
             </span>
           </motion.div>
         </div>
 
-        {/* ── Bottom CTA ── */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -312,7 +291,7 @@ export default function Experience() {
               Want the full picture?
             </p>
             <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
-              Download my resume for a complete overview of experience, education, and skills.
+              Download my resume for a complete overview of experience, education, and projects.
             </p>
           </div>
           <a
@@ -326,7 +305,6 @@ export default function Experience() {
             </span>
           </a>
         </motion.div>
-
       </div>
     </section>
   )
