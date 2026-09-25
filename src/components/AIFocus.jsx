@@ -17,7 +17,7 @@ const focusAreas = [
   {
     icon: BrainCircuit,
     title: 'LLM Applications',
-    desc: 'Building production-ready applications powered by large language models — Gemini API for cloud inference and Ollama for local, privacy-first deployment.',
+    desc: 'Building practical applications powered by large language models — Gemini API for cloud inference and Ollama for local, privacy-first deployment.',
     accent: '#0ea5e9',
     bg: 'rgba(14,165,233,0.07)',
     border: 'rgba(14,165,233,0.18)',
