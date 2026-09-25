@@ -156,39 +156,22 @@ function SkillGroup({ category, icon: Icon, accent, bg, border, skills, groupInd
 }
 
 const coreSkills = [
-  { name: 'Python & Data Science', level: 90, color: '#0ea5e9' },
-  { name: 'Machine Learning', level: 85, color: '#a855f7' },
-  { name: 'LLMs & RAG', level: 80, color: '#22d3ee' },
-  { name: 'SQL & Analytics', level: 82, color: '#10b981' },
-  { name: 'AI Application Development', level: 78, color: '#f97316' },
-  { name: 'Deep Learning', level: 75, color: '#ec4899' },
+  { name: 'Python & Data Science', level: 'Strong', color: '#0ea5e9' },
+  { name: 'Machine Learning', level: 'Strong', color: '#a855f7' },
+  { name: 'LLMs & RAG', level: 'Working', color: '#22d3ee' },
+  { name: 'SQL & Analytics', level: 'Strong', color: '#10b981' },
+  { name: 'AI Application Development', level: 'Working', color: '#f97316' },
+  { name: 'Deep Learning', level: 'Working', color: '#ec4899' },
 ]
 
-function ProficiencyBar({ name, level, color, index }) {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-40px' })
-
+function ProficiencyBar({ name, level, color }) {
   return (
-    <div ref={ref} className="mb-4">
-      <div className="flex justify-between items-center mb-1.5">
+    <div className="mb-4">
+      <div className="flex justify-between items-center">
         <span className="text-sm font-medium" style={{ color: 'var(--text-primary)', fontFamily: 'DM Sans, sans-serif' }}>
           {name}
         </span>
-        <span className="font-mono text-xs" style={{ color }}>
-          {level}%
-        </span>
-      </div>
-      <div
-        className="w-full h-1.5 rounded-full overflow-hidden"
-        style={{ background: 'rgba(255,255,255,0.05)' }}
-      >
-        <motion.div
-          className="h-full rounded-full"
-          style={{ background: `linear-gradient(90deg, ${color}99, ${color})` }}
-          initial={{ width: 0 }}
-          animate={inView ? { width: `${level}%` } : { width: 0 }}
-          transition={{ duration: 1, delay: index * 0.1, ease: 'easeOut' }}
-        />
+        <span className="font-mono text-xs" style={{ color }}>{level}</span>
       </div>
     </div>
   )
@@ -249,7 +232,7 @@ export default function Skills() {
                     Core Proficiency
                   </h3>
                   <p className="text-xs font-mono mt-0.5" style={{ color: 'var(--text-muted)' }}>
-                    self-assessed
+                    experience-based
                   </p>
                 </div>
               </div>
