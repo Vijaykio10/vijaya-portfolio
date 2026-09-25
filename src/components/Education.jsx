@@ -19,7 +19,7 @@ const education = [
     institution: 'SRM Institute of Science and Technology',
     location: 'Chennai, India',
     period: '2024 – 2026',
-    status: 'Ongoing',
+    status: 'Completed',
     accent: '#0ea5e9',
     accentBg: 'rgba(14,165,233,0.08)',
     accentBorder: 'rgba(14,165,233,0.2)',
@@ -57,7 +57,7 @@ const certifications = [
     accent: '#0ea5e9',
     bg: 'rgba(14,165,233,0.07)',
     border: 'rgba(14,165,233,0.18)',
-    link: 'https://linkedin.com/',
+    link: null,
     skills: ['Python', 'Scikit-learn', 'Data Preprocessing'],
   },
   {
@@ -77,7 +77,7 @@ const certifications = [
     accent: '#22d3ee',
     bg: 'rgba(34,211,238,0.07)',
     border: 'rgba(34,211,238,0.18)',
-    link: 'https://learn.microsoft.com/',
+    link: null,
     skills: ['Power BI', 'DAX', 'Data Modelling', 'Reporting'],
   },
 ]
@@ -250,16 +250,18 @@ function CertCard({ cert, index }) {
             </p>
           </div>
         </div>
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg transition-all duration-200 opacity-0 group-hover:opacity-100"
-          style={{ background: bg, border: `1px solid ${border}`, color: accent }}
-          aria-label="View certificate"
-        >
-          <ExternalLink size={13} />
-        </a>
+        {link && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg transition-all duration-200 opacity-0 group-hover:opacity-100"
+            style={{ background: bg, border: `1px solid ${border}`, color: accent }}
+            aria-label="View certificate"
+          >
+            <ExternalLink size={13} />
+          </a>
+        )}
       </div>
 
       <div
@@ -270,7 +272,7 @@ function CertCard({ cert, index }) {
       <div className="flex items-center gap-1.5 mb-3">
         <Award size={12} style={{ color: accent }} />
         <span className="text-xs font-mono" style={{ color: 'var(--text-muted)', letterSpacing: '0.06em' }}>
-          VERIFIED CREDENTIAL
+          COURSE / CERTIFICATION
         </span>
       </div>
 
@@ -315,8 +317,7 @@ export default function Education() {
             Education &amp; <span className="gradient-text">Certifications</span>
           </h2>
           <p className="section-subtitle">
-            Academic foundations in data science and computer science, validated
-            by industry-recognised credentials.
+            Academic foundations in data science and computer science, supported by coursework and industry learning.
           </p>
         </motion.div>
 
@@ -369,7 +370,7 @@ export default function Education() {
               style={{ color: 'var(--text-muted)', letterSpacing: '0.1em' }}
             >
               <Award size={13} style={{ color: 'var(--cyan)' }} />
-              VERIFIED CERTIFICATIONS
+              CERTIFICATIONS
             </motion.p>
 
             <div className="space-y-4">
