@@ -105,7 +105,7 @@ export default function Footer() {
 
             {/* Role tags */}
             <div className="flex flex-wrap gap-2 mb-6">
-              {['AI/ML Engineer', 'LLM Developer', 'Data Analyst'].map(tag => (
+              {['AI/ML Engineer', 'GenAI Developer', 'LLM / RAG'].map(tag => (
                 <span
                   key={tag}
                   className="text-xs font-mono px-2.5 py-1 rounded-md"
@@ -211,7 +211,7 @@ export default function Footer() {
               className="text-xs font-mono hidden sm:block"
               style={{ color: 'var(--text-muted)' }}
             >
-              Chennai, India · Open to Remote
+              Tamil Nadu, India · Open to South India &amp; Remote
             </span>
 
             {/* Back to top */}
