@@ -1,5 +1,7 @@
 import { ArrowDownRight, ArrowUpRight } from 'lucide-react'
 
+import SignalSculpture from './SignalSculpture'
+
 export default function Hero() {
   return (
     <section id="home" className="research-hero">
@@ -13,6 +15,7 @@ export default function Hero() {
           <a href="/resume.pdf">View résumé <ArrowUpRight size={16} /></a>
         </div>
       </div>
+      <SignalSculpture />
     </section>
   )
 }
