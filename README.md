@@ -1,70 +1,33 @@
-# Vijaya Ragunath — Developer Portfolio 🌐
+# Vijaya Ragunath S
 
-A modern personal portfolio built with **React, Vite, Tailwind CSS, Framer Motion, and Lucide React**.
+**AI/ML Engineering · Speech AI · LLM Applications · Computer Vision**
 
-The site presents my experience, AI/ML focus, selected projects, technical skills, education, and contact information.
+I build AI applications that combine models with usable workflows. My projects span local LLM inference, structured analysis of conversations, and dataset preparation for Indian Sign Language recognition.
 
-## 🚀 Highlights
+[Portfolio website](https://vijaya-portfolio-seven.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/vijayaragunath)
 
-- Responsive portfolio UI
-- Animated sections and interactions with Framer Motion
-- AI/ML-focused project showcase
-- Skills and experience sections
-- Education and contact sections
-- Modern component-based React architecture
+## Selected AI/ML projects
 
-## 🛠️ Tech Stack
+| Project | Engineering work | Status |
+| --- | --- | --- |
+| [AI English Coach](https://github.com/Vijaykio10/ai-english-coach) | Built a Streamlit app for conversation and interview practice. Whisper transcribes speech, Mistral 7B runs locally through Ollama and generates structured coaching feedback, and the app tracks and exports session metrics. | Public source and setup |
+| Smart Samvada · IIIT Tiruchirappalli | Working on dataset selection and preparation for Indian Sign Language recognition. The project aims to support camera-based signing on Android and iOS. | Research in progress |
+| FitNova · Sales Call Intelligence | Built an LLM workflow that classifies sales calls, scores them against a rubric, and checks that supporting quotes appear in the transcript. Results are stored in SQLite and reviewed in Streamlit. | Private project |
+| Pennar Pulse | Prototyped a camera-based attendance workflow covering enrollment, recognition decisions, attendance records, and reporting. | Private prototype |
 
-- React 18
-- Vite
-- Tailwind CSS
-- Framer Motion
-- Lucide React
-- JavaScript / JSX
+## Selected web project
 
-## 📁 Structure
+**Achilles Constructions & Interiors** · Built a website demo with a service showcase, a guided project planner, and an owner dashboard populated with sample enquiries. The demo illustrates how visitors could prepare project briefs and how an owner could organize submissions.
 
-```text
-src/
-├── components/
-│   ├── Navbar
-│   ├── Hero
-│   ├── About
-│   ├── Skills
-│   ├── Experience
-│   ├── Projects
-│   ├── AIFocus
-│   ├── Education
-│   ├── Contact
-│   └── Footer
-└── App.jsx
-```
+## Run the portfolio website locally
 
-## ⚡ Run Locally
+The website uses React, Vite, Tailwind CSS, and Framer Motion.
 
 ```bash
-git clone https://github.com/VijayaKio10/vijaya-portfolio.git
+git clone https://github.com/Vijaykio10/vijaya-portfolio.git
 cd vijaya-portfolio
 npm install
 npm run dev
 ```
 
-For a production build:
-
-```bash
-npm run build
-```
-
-## 🎯 Purpose
-
-This project is the public-facing portfolio for my work in **AI/ML, Generative AI, software engineering, and data science**.
-
-## 🔗 Links
-
-- Portfolio: https://vijaya-portfolio-seven.vercel.app/
-- GitHub: https://github.com/VijayaKio10
-- LinkedIn: https://www.linkedin.com/in/vijayaragunath
-
-## 👨‍💻 Author
-
-**Vijaya Ragunath** — AI/ML Engineer | Generative AI | LLMs | RAG | Python
+Run `npm run build` to create a production build.
