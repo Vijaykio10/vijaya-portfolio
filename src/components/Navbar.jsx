@@ -87,8 +87,7 @@ export default function Navbar() {
                 className="font-display font-800 text-lg tracking-tight"
                 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800 }}
               >
-                <span className="gradient-text">VR</span>
-                <span style={{ color: 'var(--text-secondary)' }}>.ai</span>
+                AI/ML Engineer
               </span>
             </motion.a>
 
@@ -209,7 +208,7 @@ export default function Navbar() {
                   <Cpu size={18} color="white" />
                 </div>
                 <span className="text-lg font-bold gradient-text" style={{ fontFamily: 'Syne, sans-serif' }}>
-                  Vijaya Ragunath
+                  AI/ML Engineer
                 </span>
               </div>
 
