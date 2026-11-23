@@ -41,7 +41,7 @@ const highlights = [
 const facts = [
   { icon: MapPin, label: 'Based in', value: 'Tamil Nadu, India' },
   { icon: GraduationCap, label: 'Education', value: 'M.Sc. Applied Data Science' },
-  { icon: Briefcase, label: 'Current role', value: 'AI / ML Intern · VDart' },
+  { icon: Briefcase, label: 'Current role', value: 'Generative AI Researcher · IIIT Tiruchirappalli' },
 ]
 
 export default function About() {
@@ -65,7 +65,7 @@ export default function About() {
             Building <span className="gradient-text">Practical AI</span>
           </h2>
           <p className="section-subtitle">
-            An early-career AI/ML engineer focused on turning machine learning and generative AI concepts into useful software.
+            I work across computer vision research and applied language-model engineering.
           </p>
         </motion.div>
 
@@ -78,7 +78,7 @@ export default function About() {
             className="lg:col-span-2 glass-card p-7 md:p-9"
           >
             <p className="text-lg leading-relaxed mb-5" style={{ color: 'var(--text-secondary)' }}>
-              I’m an <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>M.Sc. Applied Data Science</span> graduate and AI/ML intern at VDart, with hands-on experience building AI applications rather than only experimenting with models in notebooks.
+              I’m an <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>M.Sc. Applied Data Science</span> graduate and Generative AI Researcher (Project Staff) at IIIT Tiruchirappalli.
             </p>
             <p className="text-base leading-relaxed mb-5" style={{ color: 'var(--text-secondary)' }}>
               My work spans <span style={{ color: 'var(--cyan)' }}>machine learning, deep learning, LLM applications, RAG pipelines, computer vision, speech AI, and data analytics</span>. I enjoy connecting these pieces into complete workflows — from data ingestion and model/API integration to storage, dashboards, and user-facing applications.

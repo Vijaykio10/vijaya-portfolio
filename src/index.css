@@ -481,3 +481,32 @@ h1, h2, h3, h4, h5, h6 {
     padding: 70px 0;
   }
 }
+
+/* Research introduction and technical work */
+:root { --bg-primary:#111415; --text-primary:#f5f2eb; --text-secondary:#bdc6c7; --text-muted:#98a6ad; }
+.research-wrap { width:min(100% - 3rem,68rem); margin:auto; }
+.research-hero { padding:clamp(8rem,14vw,13rem) 0 5rem; background:radial-gradient(ellipse at 85% 30%,#1a3538,transparent 54%),#111415; }
+.research-kicker { color:#80e8df; font:600 .78rem/1.6 'JetBrains Mono',monospace; letter-spacing:.035em; }
+.research-hero h1 { margin:1rem 0; font:700 clamp(3.5rem,9vw,7.6rem)/.96 Syne,sans-serif; letter-spacing:-.055em; }
+.research-hero h1 span,.work-row a { color:#80e8df; }
+.research-hero h2,.research-section h3 { font:600 clamp(1.3rem,3vw,2rem)/1.2 Syne,sans-serif; }
+.research-intro,.work-row p:not(.research-kicker),.inference-panel>p:not(.research-kicker) { max-width:62ch; margin:.85rem 0; color:var(--text-secondary); }
+.research-actions { display:flex; flex-wrap:wrap; align-items:center; gap:1.5rem; margin-top:2rem; }
+.research-actions a { display:inline-flex; align-items:center; gap:.5rem; font-weight:600; }
+.research-primary { padding:.8rem 1.1rem; border-radius:.4rem; color:#102425; background:#80e8df; }
+.research-section { padding:4rem 0; background:#15191a; }
+.research-section h2 { font:700 clamp(2rem,5vw,3.5rem)/1.2 Syne,sans-serif; margin-bottom:2rem; }
+.work-row { display:grid; grid-template-columns:minmax(8rem,1fr) 3fr; gap:1rem; padding:1.75rem 0; border-top:1px solid #394445; }
+.inference-panel { background:#192123; padding:clamp(1rem,4vw,3rem); border:1px solid #405859; border-radius:.7rem; margin-top:2rem; }
+.inference-panel h3 { margin:.6rem 0; }
+.inference-panel audio { display:block; width:min(100%,26rem); margin:1.2rem 0; }
+.inference-panel details { border-top:1px solid #405859; padding:1rem 0; }
+.inference-panel summary { cursor:pointer; font-weight:600; }
+.inference-panel details[open] summary { color:#80e8df; }
+.model-output { font-family:'JetBrains Mono',monospace; padding:.8rem 0; white-space:pre-line; }
+.inference-panel small { color:var(--text-secondary); }
+.skip-link { position:fixed; top:-6rem; left:1rem; z-index:999; background:white; color:black; padding:.6rem; }
+.skip-link:focus { top:1rem; }
+:focus-visible { outline:2px solid #80e8df; outline-offset:4px; }
+@media(max-width:600px) { .work-row { grid-template-columns:1fr; gap:.4rem; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; } }

@@ -6,7 +6,7 @@ const footerLinks = {
     { label: 'About',      href: '#about' },
     { label: 'Skills',     href: '#skills' },
     { label: 'Experience', href: '#experience' },
-    { label: 'Projects',   href: '#projects' },
+    { label: 'Technical work',   href: '#projects' },
     { label: 'AI Focus',   href: '#ai-focus' },
     { label: 'Education',  href: '#education' },
     { label: 'Contact',    href: '#contact' },
@@ -29,7 +29,7 @@ const socials = [
 
 const scrollTo = (href) => {
   const el = document.querySelector(href)
-  if (el) el.scrollIntoView({ behavior: 'smooth' })
+  if (el) el.scrollIntoView({ behavior: 'auto' })
 }
 
 export default function Footer() {
@@ -99,13 +99,12 @@ export default function Footer() {
               className="text-sm leading-relaxed mb-5 max-w-xs"
               style={{ color: 'var(--text-secondary)' }}
             >
-              AI/ML Engineer building intelligent systems with LLMs, RAG pipelines,
-              and real-world machine learning. M.Sc. Applied Data Science · SRM Institute.
+              AI/ML researcher working on Indian Sign Language translation at IIIT Tiruchirappalli. M.Sc. Applied Data Science · SRM Institute.
             </p>
 
             {/* Role tags */}
             <div className="flex flex-wrap gap-2 mb-6">
-              {['AI/ML Engineer', 'GenAI Developer', 'LLM / RAG'].map(tag => (
+              {['AI/ML Researcher', 'Generative AI', 'Computer Vision'].map(tag => (
                 <span
                   key={tag}
                   className="text-xs font-mono px-2.5 py-1 rounded-md"
@@ -216,7 +215,7 @@ export default function Footer() {
 
             {/* Back to top */}
             <motion.button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'auto' })}
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
               aria-label="Back to top"

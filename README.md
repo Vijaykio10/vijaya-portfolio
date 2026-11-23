@@ -1,6 +1,8 @@
 # Vijaya Ragunath S
 
-**AI/ML Engineering · Speech AI · LLM Applications · Computer Vision**
+**AI/ML Researcher · Generative AI · Computer Vision · Deep Learning**
+
+Generative AI Researcher (Project Staff), Indian Institute of Information Technology, Tiruchirappalli. October 2026 – Present · Full-time · On-site in Tiruchirappalli, Tamil Nadu, India. I select and prepare visual datasets for Indian Sign Language recognition as part of translation research.
 
 I build AI applications that combine models with usable workflows. My projects span local LLM inference, structured analysis of conversations, and dataset preparation for Indian Sign Language recognition.
 

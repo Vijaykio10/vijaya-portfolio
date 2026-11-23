@@ -15,6 +15,20 @@ const fadeUp = {
 
 const experiences = [
   {
+    role: 'Generative AI Researcher (Project Staff)',
+    company: 'Indian Institute of Information Technology, Tiruchirappalli',
+    location: 'Tiruchirappalli, Tamil Nadu, India · On-site',
+    period: 'October 2026 – Present',
+    type: 'Full-time',
+    icon: BrainCircuit,
+    accent: '#80e8df',
+    accentBg: 'rgba(128,232,223,0.08)',
+    accentBorder: 'rgba(128,232,223,0.2)',
+    summary: 'Indian Sign Language translation research at IIIT Tiruchirappalli.',
+    achievements: ['Select and prepare visual datasets for Indian Sign Language recognition.'],
+    tags: ['Computer vision', 'Deep learning', 'Dataset preparation'],
+  },
+  {
     role: 'AI / ML Intern',
     company: 'VDart',
     location: 'Chennai, India',
@@ -225,7 +239,7 @@ export default function Experience() {
             Professional <span className="gradient-text">Experience</span>
           </h2>
           <p className="section-subtitle">
-            Applied AI/ML and data analytics experience at VDart, with a focus on building practical systems from business requirements.
+            Research at IIIT Tiruchirappalli and applied AI and analytics experience at VDart.
           </p>
         </motion.div>
 
