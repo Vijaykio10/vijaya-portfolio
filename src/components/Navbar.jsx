@@ -149,7 +149,9 @@ export default function Navbar() {
               className="xl:hidden relative z-10 w-10 h-10 flex items-center justify-center rounded-lg transition-all"
               style={{ background: 'rgba(14,165,233,0.08)', border: '1px solid rgba(14,165,233,0.15)' }}
               onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Toggle menu"
+              aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+              aria-expanded={menuOpen}
+              aria-controls={menuOpen ? "mobile-navigation" : undefined}
             >
               <AnimatePresence mode="wait">
                 {menuOpen ? (
@@ -184,11 +186,12 @@ export default function Navbar() {
         {menuOpen && (
           <motion.div
             key="mobile-menu"
+            id="mobile-navigation"
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-40 xl:hidden flex flex-col"
+            className="fixed inset-0 z-40 xl:hidden flex flex-col overflow-y-auto pt-20 pb-6"
             style={{
               background: 'rgba(2,8,24,0.97)',
               backdropFilter: 'blur(20px)',
@@ -198,7 +201,7 @@ export default function Navbar() {
             <div className="flex-1 flex flex-col justify-center px-8">
 
               {/* Mobile logo */}
-              <div className="flex items-center gap-2 mb-12">
+              <div className="flex items-center gap-2 mb-4">
                 <div
                   className="w-9 h-9 rounded-lg flex items-center justify-center"
                   style={{ background: 'linear-gradient(135deg, var(--blue), var(--violet))' }}
@@ -240,7 +243,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="flex flex-col gap-3 mt-10"
+                className="flex flex-col gap-3 mt-5"
               >
                 <a href="/resume.pdf" download className="btn-outline w-full justify-center py-3 text-base">
                   Download Resume

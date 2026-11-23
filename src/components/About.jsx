@@ -84,7 +84,7 @@ export default function About() {
               My work spans <span style={{ color: 'var(--cyan)' }}>machine learning, deep learning, LLM applications, RAG pipelines, computer vision, speech AI, and data analytics</span>. I enjoy connecting these pieces into complete workflows — from data ingestion and model/API integration to storage, dashboards, and user-facing applications.
             </p>
             <p className="text-base leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-              Recent projects include a sales-call intelligence pipeline, a workforce attendance and face-recognition prototype, and a voice-based AI English coach. I’m currently looking for opportunities where I can contribute to applied AI/ML engineering while continuing to grow toward production-grade systems.
+              In my speech AI work, I connect microphone input to transcription and local inference. In transcript analysis, I check the evidence behind a model’s scores before presenting the results for review.
             </p>
           </motion.div>
 

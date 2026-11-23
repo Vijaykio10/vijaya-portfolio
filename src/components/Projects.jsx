@@ -1,3 +1,5 @@
+import sample from './practiceSample.json'
+
 const coach = 'https://github.com/Vijaykio10/ai-english-coach'
 
 const work = [
@@ -24,9 +26,9 @@ export default function Projects() {
           <h3>Follow one inference</h3>
           <p>Listen to a practice sentence, then inspect the transcript and coaching response.</p>
           <audio controls preload="metadata" aria-label="Play the synthetic English practice sentence" src="/practice-sample.wav" />
-          <details><summary>Read transcript</summary><p className="model-output">Yesterday I go to the library.</p></details>
-          <details><summary>Show coaching feedback</summary><p className="model-output">Yesterday I went to the library.</p><p>“Yesterday” places the action in the past. The past tense of “go” is “went”.</p></details>
-          <small>Synthetic speech with an illustrative transcript and correction.</small>
+          <details><summary>Read transcript</summary><p className="model-output">{sample.transcript}</p></details>
+          <details><summary>Show coaching feedback</summary><p className="model-output">{sample.feedback}</p><p>The coach displays the score twice here. Mistral returned 8/10 inside the practice question, and the app appended the parsed value as 8.0/10.</p></details>
+          <small>Synthetic speech · Whisper base transcription (faster-whisper) · Mistral 7B via Ollama · Intermediate practice mode.</small>
         </article>
       </div>
     </section>
