@@ -15,22 +15,36 @@ const fadeUp = {
 
 const experiences = [
   {
+    role: 'Generative AI Researcher (Project Staff)',
+    company: 'Indian Institute of Information Technology, Tiruchirappalli',
+    location: 'Tiruchirappalli, Tamil Nadu, India · On-site',
+    period: 'October 2026 – Present',
+    type: 'Full-time',
+    icon: BrainCircuit,
+    accent: '#80e8df',
+    accentBg: 'rgba(128,232,223,0.08)',
+    accentBorder: 'rgba(128,232,223,0.2)',
+    summary: 'Indian Sign Language translation research at IIIT Tiruchirappalli.',
+    achievements: ['Select and prepare visual datasets for Indian Sign Language recognition.'],
+    tags: ['Computer vision', 'Deep learning', 'Dataset preparation'],
+  },
+  {
     role: 'AI / ML Intern',
     company: 'VDart',
     location: 'Chennai, India',
-    period: 'Nov 2025 – Present',
-    type: 'Current',
+    period: 'November 2025 – March 2026',
+    type: 'Internship',
     icon: BrainCircuit,
     accent: '#0ea5e9',
     accentBg: 'rgba(14,165,233,0.08)',
     accentBorder: 'rgba(14,165,233,0.2)',
     summary:
-      'Working on applied AI/ML solutions across LLM applications, computer vision prototypes, speech AI, and data-driven automation — turning business requirements into usable AI systems.',
+      'Worked on applied AI/ML solutions across LLM applications, computer vision prototypes, speech AI, and data-driven automation — turning business requirements into usable AI systems.',
     achievements: [
       'Built and iterated on end-to-end AI/ML prototypes spanning ingestion, analysis, model/API integration, storage, and user-facing interfaces.',
       'Developed LLM-powered applications using Gemini API, Ollama, LangChain, RAG, embeddings, and vector databases.',
-      'Built FitNova, a sales-call intelligence pipeline for conversation classification, rubric-based analysis, structured outputs, and SQLite-backed reporting.',
-      'Contributed to Pennar Pulse, a workforce attendance prototype with webcam-based recognition flows, employee management, attendance, reporting, and operational modules.',
+      'Implemented rubric-based LLM scoring and checked generated supporting quotes against transcript text before storing results in SQLite.',
+      'Prototyped camera input, enrollment, and recognition decisions for an attendance workflow.',
       'Developed voice-based AI applications using Whisper, local LLM inference, text-to-speech, and Streamlit interfaces.',
       'Worked with FastAPI, Streamlit, React/Vite, SQLite, and Git/GitHub to turn AI concepts into demonstrable applications.',
     ],
@@ -225,7 +239,7 @@ export default function Experience() {
             Professional <span className="gradient-text">Experience</span>
           </h2>
           <p className="section-subtitle">
-            Applied AI/ML and data analytics experience at VDart, with a focus on building practical systems from business requirements.
+            Research at IIIT Tiruchirappalli and applied AI and analytics experience at VDart.
           </p>
         </motion.div>
 
